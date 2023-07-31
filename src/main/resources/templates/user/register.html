@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+        xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
+<style>
+  .d1 {
+    width: 640px;
+    height: 400px;
+    margin-left: 460px;
+    margin-top: 100px;
+    border: 1px solid red;
+    background-color: whitesmoke;
+  }
+
+  .c1 {
+    margin-left: 12px
+  }
+  body{
+    background-color: #0dcaf0;
+  }
+</style>
+
 <body>
-$END$
+<div class="d1">
+  <h1 style="text-align: center">Dang Ky</h1>
+  <div style="margin-left: 180px;margin-top: 50px;">
+
+    <form action="/user/save" method="post" th:object="${user}">
+      <input th:field="*{uid}" type="text"  hidden>
+      <label>Full Name : </label>
+      <input th:field="*{name}" type="text" placeholder="Họ tên"><br><br>
+      <label>username : </label>
+      <input th:field="*{username}" class="c1" type="text"><br><br>
+      <label>password : </label>
+      <input th:field="*{password}" class="c1" type="password"><br><br>
+      <label>Role ADMIN : </label>
+      <input type="checkbox" name="role" value="1">
+      <label>Role USER : </label>
+      <input type="checkbox" name="role" value="2">
+      <br><br>
+      <button type="submit" style="margin-left: 100px">Dang ky</button>
+    </form>
+  </div>
+</div>
+<script>
+
+</script>
 </body>
 </html>

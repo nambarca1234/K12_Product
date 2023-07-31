@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+        xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<a href="/login?lang=vn">VN</a>
+<a href="/login?lang=en">EN</a>
+<h1 th:text="#{k12.message01}"></h1>
+<h1 th:text="#{k12.message02}"></h1>
 <form method="post" action="/login" >
-    <h1>dang ky</h1>
+    <h1>Dang Nhap</h1>
     <label>username</label>
     <input name="username" id="username"  type="text"><br><br>
     <label>password</label>
